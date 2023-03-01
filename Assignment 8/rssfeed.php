@@ -1,11 +1,31 @@
 <?php
+class RssFeed {
+    private $url;
 
-libxml_use_internal_errors(true);
+    public function __construct($url) {
+        $this->url = $url;
+    }
 
-$rss_feed = simplexml_load_string("https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms");
+    public function getFeed() {
+        libxml_use_internal_errors(true);
 
+        $rss_feed = simplexml_load_file($this->url);
 
-echo "<pre>";
-print_r($rss_feed);
-echo "</pre>";
+        if ($rss_feed === false) {
+            echo "Failed loading RSS feed\n";
+            foreach(libxml_get_errors() as $error) {
+                echo "\t", $error->message;
+            }
+        } else {
+            echo "<pre>";
+            print_r($rss_feed);
+            echo "</pre>";
+        }
+    }
+}
+
+$url = $_POST['rssurl'];
+$rss = new RssFeed($url);
+$rss->getFeed();
+
 ?>
