@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rss feed </title>
+    <title>Csv </title>
     <style>
-       @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
    .container{
     text-align: center;
     margin-top: 20%;
@@ -18,13 +17,11 @@
 <body>
     
   <div class="container"  >
-  <h2>Reading RSS feed using php</h2>
-<form action="/Php assignments/Assignment 8/rssfeed.php" method="post">
-  <input type="text" placeholder="Enter website feed url" name="rssurl" style="height: 29px;
-    width: 289px;">
-  <br> <br>
-  <input type="submit" value="Submit" style="background-color: yellow; border-color: aliceblue; border: 0px;
-  width: 185px;
+  <h2>Reading and updating csv file using php</h2>
+<form action="/Php assignments/Assignment 9/csv.php" method="post">
+<label for="myfile">Select a file:</label>
+<input type="file" id="myfile" name="myfile"> <br> <br>
+  <input type="submit" value="OPEN" style="background-color: yellow; border-color: aliceblue; border: 0px; width: 185px;
     height: 41px; font-size: 25px;
     border-radius: 11px; cursor: pointer;" >
 </form> 
