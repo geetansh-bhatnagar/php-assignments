@@ -19,7 +19,7 @@
     
   <div class="container"  >
   <h2>Reading RSS feed using php</h2>
-<form action="/Php assignments/Assignment 8/rssfeed.php" method="post">
+<form action="rssfeed.php" method="post">
   <input type="text" placeholder="Enter website feed url" name="rssurl" style="height: 29px;
     width: 289px;">
   <br> <br>
